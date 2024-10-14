@@ -102,7 +102,7 @@ $ curl http://localhost:8080/albums \
     --data '{"title": "A Kind of Magic", "artist": "Queen","price": 74.99}'
 ```
 Example of response:
-```curlrc
+```http
 HTTP/1.1 201 Created
 Content-Type: application/json; charset=utf-8
 Date: Mon, 14 Oct 2024 14:52:56 GMT
