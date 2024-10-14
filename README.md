@@ -1,25 +1,25 @@
 # Run
 
-```sh
+```bash
 $ go get .
 $ go run .
 ```
 
 Default database used to store data is `db.sqlite3`. To specify different file, use `--db` flag:
 
-```sh
+```bash
 $ go run . --db db2.sqlite3
 ```
 
 Default port is 8080. To specify a different one, use `--port` flag:
 
-```sh
+```bash
 $ go run . --port 8081
 ```
 
 Default host is `localhost`. To specify a different one, use `--host` flag:
 
-```sh
+```bash
 $ go run . --host 0.0.0.0
 ```
 
@@ -27,7 +27,7 @@ $ go run . --host 0.0.0.0
 
 To list albums, do `GET /albums`:
 
-```sh
+```bash
 $ curl localhost:8080/albums
 ```
 Example of response:
@@ -56,7 +56,7 @@ Example of response:
 
 To get paginated data, provide `limit` and `offset` URL params:
 
-```sh
+```bash
 $ curl localhost:8080/albums?limit=2&offset=0
 ```
 Example of response:
@@ -79,7 +79,7 @@ Example of response:
 
 To get single item, use `GET /albums/:id` pattern:
 
-```sh
+```bash
 $ curl localhost:8080/albums/2
 ```
 Example of response:
@@ -94,7 +94,7 @@ Example of response:
 
 To create new item, use `POST /albums` and provide `application/json` body:
 
-```sh
+```bash
 $ curl http://localhost:8080/albums \
     --include \
     --header "Content-Type: application/json" \
